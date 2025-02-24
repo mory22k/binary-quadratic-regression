@@ -1,0 +1,49 @@
+[project]
+name = "bqr"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "mory22k", email = "mory22k@dc.tohoku.ac.jp" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "dimod>=0.12.18",
+    "numpy>=2.2.3",
+]
+license="Apache-2.0"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "dwave-samplers>=1.4.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.0",
+    "mypy>=1.15.0",
+    "pytest>=8.3.4",
+    "ruff>=0.9.4",
+    "scikit-learn>=1.6.1",
+    "types-tqdm>=4.67.0.20241221",
+]
+
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
