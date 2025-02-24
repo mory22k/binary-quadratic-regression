@@ -2,9 +2,9 @@
 
 This is a simple regressor that uses a binary quadratic model to predict the output of a given input. The regressor inherits from the `dimod.BinaryQuadraticModel` class. The regressor is trained using the `fit` method and the prediction is made using the `predict` method.
 
-## How to use
+# How to use
 
-## Define the inner regression model
+## Define the child regression model
 
 Define your regression model inheriting from the `bqr.child_regression.BaseChildRegression` class.
 
@@ -80,3 +80,7 @@ from dwave.samplers import SimulatedAnnealingSampler
 sampler = SimulatedAnnealingSampler()
 sampler.sample(bqr)
 ```
+
+# License
+
+Read [LICENSE](LICENSE).
